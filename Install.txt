@@ -1,0 +1,48 @@
+Go to any browser and search for Download Oracle Java or go at https://www.oracle.com/java/technologies/downloads/
+
+Choose the latest version until any specific requirement.
+
+Select the OS and click on the downloadable link in blue, the download will start.
+
+Once downloaded click on the file to install dmg in macos, exe in windows and rpm in linux.
+
+Then click on install and follow steps.
+
+These steps are for macos they may vary on different OS
+
+Open terminal and type 
+/usr/libexec/java_home -V
+
+You will see something like 
+Matching Java Virtual Machines (2):
+    26.0.2.1 (arm64) "Oracle Corporation" - "Java SE 26.0.2.1" /Library/Java/JavaVirtualMachines/jdk-26.jdk/Contents/Home
+    24.0.2 (arm64) "Oracle Corporation" - "Java SE 24.0.2" /Library/Java/JavaVirtualMachines/jdk-24.jdk/Contents/Home
+/Library/Java/JavaVirtualMachines/jdk-26.jdk/Contents/Home
+
+it confirms that the java is installed but we need to configure java home 
+
+open new terminal and make sure you are at root level 
+
+then type ls -all
+ls means list so it means list all 
+
+you will see a file named .zshrc 
+
+now we need to add some paths in it so we will open it with 
+open .zshrc
+
+once the file is opened go to its very last and paste the below lines 
+
+export JAVA_HOME=$(/usr/libexec/java_home -v 25.0.1)
+export PATH=$JAVA_HOME/bin:$PATH
+
+once pasted go to files > save > close
+
+now again go to terminal and type source .zshrc it will update the paths from your .zshrc file 
+
+now to check if the path is set type 
+echo $JAVA_HOME
+
+it will show something like /Library/Java/JavaVirtualMachines/jdk-26.jdk/Contents/Home it shows that the path has been set now.
+
+Installation is Done!
