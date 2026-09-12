@@ -1,0 +1,9 @@
+Java is portable as compared to c and c++. 
+
+Portability means when a code can be run on all platforms without compiling it again and again 
+
+A platform is a combination of OS and Processor 
+Platform 1 : Intel x86 + Windows 
+Platform 2 : ARM + Macos
+
+
